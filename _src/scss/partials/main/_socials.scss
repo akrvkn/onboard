@@ -1,0 +1,42 @@
+.socials {
+	height: 25px;
+	//overflow: hidden;
+	font-size: 0px;
+	display: flex;
+	align-items: center;
+	
+	.icon {
+		fill: currentColor;
+		&-vk {
+			font-size: 19px;
+		}
+		&-instagram {
+			font-size: 19px;
+		}
+		&-facebook {
+			font-size: 19px;
+		}
+		&-odnoklassniki {
+			font-size: 18px;
+		}
+		&-twitter {
+			font-size: 15px;
+		}
+		&-telegram {
+			font-size: 15px;
+		}
+		&-rss {
+			font-size: 15px;
+		}
+	}
+	
+	&__item {
+		margin-right: 25px;
+		float: left;
+		color: rgba(255,255,255,.5);
+		
+		&:hover {
+			color: #fff;
+		}
+	}
+}

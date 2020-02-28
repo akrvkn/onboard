@@ -1,0 +1,63 @@
+<aside class="section-context section-filter">
+    <form id="rivercruises_filter" class="book__wrap">
+        <div class="book-scroll" data-simplebarmanual>
+            <div class="book">
+                <fieldset class="book-block">
+                        <label>Компания</label>
+                        <div class="selector full-width" id="companies">
+                            <select class="full-width" id="company">
+                                <option value="">Компания</option>
+                            </select>
+                        </div>
+                </fieldset>
+                <fieldset class="book-block">
+                        <label>Лайнер</label>
+                        <div class="selector full-width" id="ships">
+                            <select class="full-width" id="ship">
+                                <option value="">все лайнеры</option>
+                            </select>
+                        </div>
+                </fieldset>
+
+                <fieldset class="book-block">
+                        <label>Регион</label>
+                        <div class="selector full-width" id="regions">
+                            <select class="full-width" id="region">
+                                <option value="">все регионы</option>
+                            </select>
+                        </div>
+                </fieldset>
+                <fieldset class="book-block">
+                        <label>Отход после</label>
+                        <div class="datepicker-wrap full-width">
+                            <input type="text" id="date_from" name="date_from" data-min-date="20/04/2019" id="date_from" class="input-text full-width" placeholder="MM/DD/YYYY" />
+                        </div>
+                </fieldset>
+                <fieldset class="book-block">
+                        <label>Дней</label>
+                        <div class="selector full-width">
+                            <select id="cruise-days">
+                                <option value="0">продолжительность круиза</option>
+                                <option value="14">до 14 дней</option>
+                                <option value="22">от 15 до 22 дней</option>
+                                <option value="23">больше 22 дней</option>
+                            </select>
+                        </div>
+                </fieldset>
+
+                <!-- /.book-block -->
+            </div>
+            <!-- /.book -->
+        </div>
+        <!-- /.book-scroll -->
+        <div class="book-footer">
+            <button class="book-reset" type="reset">Сбросить</button>
+            <!-- /.book-reset -->
+            <button class="reset-submit btn btn_accent" type="submit"><span>Показать (<span class="book-submit-results"></span>)</span></button>
+            <!-- /.reset-submit -->
+        </div>
+        <!-- /.book-footer -->
+    </form>
+    <!-- /.book__wrap -->
+</aside>
+

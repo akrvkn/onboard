@@ -1,0 +1,97 @@
+
+<div class="tabs__wrap js-tabs" id="cruisedetails">
+    <div class="tabs js-tabs-slider" role="tablist" aria-label="круизные теплоходы">
+        <div class="">
+            <div class="swiper-slide" style="width: auto!important">
+                <button class="tab btn btn_common active" style="margin-top: 10px;" role="tab" aria-controls="ships-1-panel" id="ships-1">
+                    <span>Теплоход</span>
+                </button>
+                <button class="tab btn btn_common" style="margin-top: 10px;" role="tab" aria-selected="true" aria-controls="ships-2-panel" id="ships-2">
+                    <span>Персонал</span>
+                </button>
+                <button class="tab btn btn_common" style="margin-top: 10px;" role="tab" aria-selected="true" aria-controls="ships-3-panel" id="ships-3">
+                    <span>Расписание круиза</span>
+                </button>
+
+                <button class="tab btn btn_common " style="margin-top: 10px;" role="tab" aria-controls="ships-5-panel" id="ships-5">
+                    <span>Сервис на борту</span>
+                </button>
+            </div>
+            <!-- /.swiper-slide -->
+        </div>
+        <!-- /.tabs-inner -->
+    </div>
+    <div class="tab-panes">
+        <div class="tab-pane active" tabindex="0" role="tabpanel" id="ships-1-panel" aria-labelledby="ships-1">
+            <div class="tabs-pane__content">
+                <h2 id="shiptitle" class="section__header"></h2>
+
+                    <div class="slider swiper-container swiper-ship-gallery" data-per-view="1">
+                        <ul id="shipImages" class="slider__slides swiper-wrapper" aria-label="Теплоход">
+                        </ul>
+
+
+                        <div class="slider__controls js-slider-controls">
+                            <button type="button" class="slider-btn slider-btn_prev ship-slider-prev" aria-label="назад">
+                                <svg class="icon icon-arrow">
+                                    <use xlink:href="/assets/img/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </button>
+                            <button type="button" class="slider-btn slider-btn_next ship-slider-next" aria-label="вперед">
+                                <svg class="icon icon-arrow">
+                                    <use xlink:href="/assets/img/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- /.slider__controls -->
+                        <div class="actions__pagination slider-pagination ship-pagination"></div>
+                    </div>
+
+                <!--<ul id="river_cruise_ship_personal" class="ships" style="padding-top: 60px;">
+
+                </ul>-->
+                <div id="river_cruise_ship_desc" class="section_padding_top">
+
+                </div>
+                <!-- /.ships -->
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+        <div class="tab-pane " tabindex="0" role="tabpanel" id="ships-2-panel" aria-labelledby="ships-2">
+            <div class="tabs-pane__content">
+                <ul id="river_ship_personal" class="ships">
+                </ul>
+                <!-- /.ships -->
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+        <div class="tab-pane" tabindex="0" role="tabpanel" id="ships-3-panel" aria-labelledby="ships-2">
+            <div class="tabs-pane__content">
+                <h2 id="tourtitle" class="section__header"></h2>
+                <ul id="river_tour_points" class="shiptour">
+
+
+                </ul>
+                <!-- /.ships -->
+                <div id="route-notes" class="section_padding_top"></div>
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+
+        <div class="tab-pane " tabindex="0" role="tabpanel" id="ships-5-panel" aria-labelledby="ships-5">
+            <div class="tabs-pane__content">
+                <h3 class="section__header">В стоимость включено</h3>
+                <ul id="river_ship_services_included" class="ships">
+
+                </ul>
+                <h3 class="section__header section_padding_top">За дополнительную плату</h3>
+                <ul id="river_ship_services_pay" class="ships">
+
+                </ul>
+                <!-- /.ships -->
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+    </div>
+    <!-- /.tab-panes -->
+</div>

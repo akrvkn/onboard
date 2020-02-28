@@ -1,0 +1,168 @@
+<aside class="section-context section-filter">
+    <form id="rivercruises_filter" class="book__wrap">
+        <div class="book-scroll" data-simplebarmanual>
+            <div class="book">
+                <fieldset class="book-block">
+                    <legend>Фильтр по круизам</legend>
+                    <div class="book-checkbox">
+                        <input type="checkbox" name="only_holyday" id="only_holyday">
+                        <label for="only_holyday">Круизы выходного дня</label>
+                    </div>
+                    <!-- /.book-checkbox -->
+                    <div class="book-checkbox">
+                        <input type="checkbox" name="buy_online" id="buy_online">
+                        <label for="buy_online">С бронированием онлайн</label>
+                    </div>
+                    <!-- /.book-checkbox -->
+                    <div class="book-checkbox">
+                        <input type="checkbox" name="spcial_offers" id="special_offers">
+                        <label for="special_offers">Спецпредложения</label>
+                    </div>
+                    <!-- /.book-checkbox -->
+                    <div class="book-checkbox">
+                        <input type="checkbox" name="mtf_ships" id="mtf_ships">
+                        <label for="mtf_ships">Только фирменные теплоходы «Мостурфлота»</label>
+                    </div>
+                    <!-- /.book-checkbox -->
+                    <div class="book-checkbox">
+                        <input type="checkbox" name="intourist" id="intourist">
+                        <label for="intourist">Совместные с иностранными туристами</label>
+                    </div>
+                    <!-- /.book-checkbox -->
+                    <div class="book-checkbox">
+                        <input type="checkbox" name="only_skidki" id="only_skidki">
+                        <label for="only_skidki">Только предложения со скидкой</label>
+                    </div>
+                    <!-- /.book-checkbox -->
+                </fieldset>
+                <!-- /.book-block -->
+                <fieldset class="book-block">
+                    <legend>Теплоход</legend>
+                    <div class="book-select">
+                        <select name="select_riverships" id="select_riverships" multiple autocomplete="off" class="js-book-select">
+                        </select>
+                    </div>
+                    <!-- /.select -->
+                </fieldset>
+                <!-- /.book-block -->
+                <fieldset class="book-block">
+                    <legend>Класс теплохода</legend>
+                    <div class="book-select">
+                        <select name="select_shipclass" id="select_shipclass" autocomplete="off" class="js-book-select">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <!-- /.select -->
+                </fieldset>
+                <!-- /.book-block -->
+                <fieldset class="book-block">
+                    <legend>Дата от</legend>
+                    <div class="book-select book-date-from">
+                        <input id="date_out" name="date_out" class="js-datetime" autocomplete="off" placeholder="Дата от">
+                    </div>
+                    <!-- /.select -->
+                </fieldset>
+                <!-- /.book-block -->
+                <fieldset class="book-block">
+                    <legend>Дата до</legend>
+                    <div class="book-select book-date-from">
+                        <input id="date_in" name="date_in" class="filter-input js-datetime" autocomplete="off" placeholder="Дата до">
+                    </div>
+                    <!-- /.select -->
+                </fieldset>
+                <!-- /.book-block -->
+                <fieldset class="book-block">
+                    <legend>Пункт отправления</legend>
+                    <div class="book-select">
+                        <select name="select_pointfrom" id="select_pointfrom" autocomplete="off" class="js-book-select" data-placeholder="Отправление из">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <!-- /.select -->
+                </fieldset>
+                <!-- /.book-block -->
+                <fieldset class="book-block">
+                    <legend>Пункт прибытия</legend>
+                    <div class="book-select">
+                        <select name="select_pointto" id="select_pointto" autocomplete="off" class="js-book-select" data-placeholder="Конечный пункт">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <!-- /.select -->
+                </fieldset>
+                <!-- /.book-block -->
+                <fieldset class="book-block">
+                    <legend>Направления</legend>
+                    <div class="book-select">
+                        <select name="select_direction" id="select_direction" autocomplete="off" class="js-book-select" placeholder="Выберите направление">
+                        </select>
+                    </div>
+                    <!-- /.select -->
+                </fieldset>
+                <!-- /.book-block -->
+                <fieldset class="book-block">
+                    <legend>Продолжительность круиза</legend>
+                    <div id="range_days" class="book-range" data-from="2" data-to="30" data-min="1" data-max="56" data-book-range>
+                        <div class="book-range-from">
+                            <input type="text" name="" class="visible" value="1" data-delimiter="" data-pref='От ' data-suff='[" дня"," дней"," дней"]'>
+                            <input type="hidden" name="days_from" value="1">
+                        </div>
+                        <!-- /.book-range-from -->
+                        <div class="book-range-to">
+                            <input type="text" name="" class="visible" value="56" data-delimiter="" data-pref='До ' data-suff='[" дня"," дней"," дней"]'>
+                            <input type="hidden" name="days_to" value="56">
+                        </div>
+                        <!-- /.book-range-to -->
+                        <div class="book-range-slider range_days"></div>
+                        <!-- /.book-range-slider -->
+                    </div>
+                    <!-- /.book-range -->
+                </fieldset>
+                <!-- /.book-block -->
+                <fieldset class="book-block">
+                    <legend>Стоимость за 1 пассажира</legend>
+                    <div id="range_price" class="book-range" data-from="3000" data-to="200000" data-min="2000" data-max="220000" data-book-range>
+                        <div class="book-range-from">
+                            <input type="text" name="" class="visible" value="3000" data-delimiter=" " data-pref='От ' data-suff='[" ₽"," ₽"," ₽"]'>
+                            <input type="hidden" name="price_from" value="3000">
+                        </div>
+                        <!-- /.book-range-from -->
+                        <div class="book-range-to">
+                            <input type="text" name="" class="visible" value="" data-delimiter=" " data-pref='До ' data-suff='[" ₽"," ₽"," ₽"]'>
+                            <input type="hidden" name="price_to" value="1000000">
+                        </div>
+                        <!-- /.book-range-to -->
+                        <div class="book-range-slider range_price"></div>
+                        <!-- /.book-range-slider -->
+                    </div>
+                    <!-- /.book-range -->
+                    <div class="book-separator"></div>
+                    <!-- /.book-separator -->
+
+                </fieldset>
+                <!-- /.book-block -->
+
+                <fieldset class="book-block">
+                    <legend>Стоянки</legend>
+                    <div class="book-select">
+                        <select name="select_cities" id="select_cities" multiple autocomplete="off" class="js-book-select">
+
+                        </select>
+                    </div>
+                    <!-- /.select -->
+                </fieldset>
+                <!-- /.book-block -->
+            </div>
+            <!-- /.book -->
+        </div>
+        <!-- /.book-scroll -->
+        <div class="book-footer">
+            <button class="book-reset" type="reset">Сбросить</button>
+            <!-- /.book-reset -->
+            <button class="reset-submit btn btn_accent" type="submit"><span>Показать (<span class="book-submit-results"></span>)</span></button>
+            <!-- /.reset-submit -->
+        </div>
+        <!-- /.book-footer -->
+    </form>
+    <!-- /.book__wrap -->
+</aside>

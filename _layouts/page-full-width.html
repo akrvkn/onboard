@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+{% include head.html %}
+<body class="body">
+<!-- BEGIN content -->
+<div class="l-out">
+    <header class="l-header header header_inner">
+        {% include header/home-header-inner.html %}
+    </header>
+    {% if page.hero %}
+    {% include {{ page.hero }} %}
+    {% endif %}
+    {% include breadcrumbs.html %}
+    <div class="l-content">
+        {{ content }}
+    </div>
+    <!-- /.l-content -->
+    {% include footer/footer.html %}
+</div>
+<!-- /.l-out -->
+<!-- END content -->
+<!-- BEGIN scripts -->
+{% include footer/scripts.html %}
+</body>
+</html>

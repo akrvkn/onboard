@@ -1,0 +1,86 @@
+\:root
+	--c-text-common: #000000
+	--c-text-price: #ed2a2a
+	--c-text-accent: #83b8d4
+	--c-brand: #0962a8
+	--c-gray-1: #a3a3a3
+	--c-link-hover: #006699
+	--f-header: #{$f-header}
+	--c-footer-bg: #05518b
+	--c-grey-2: #f7f7f7
+
+	font-size: 16px
+*
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	box-sizing: border-box
+	outline: none
+	-webkit-tap-highlight-color: transparent
+	&:before, &:after
+		box-sizing: border-box
+
+html
+	scroll-behavior: smooth
+	height: 100vh
+	min-height: 100vh
+	overflow-x: hidden
+body
+	//+css-lock(16, 50, 600, 1000)
+	line-height: 1.6
+	font-size: 1rem
+	font-weight: 400
+	font-family: $f-common
+	color: var(--c-text-common)
+	background-color: #fff
+	position: relative
+	min-height: 100vh
+	scroll-snap-type: y mandatory
+	overflow-x: hidden
+	overflow: hidden auto
+
+	::selection
+		background-color: var(--c-brand)
+		color: #fff
+
+	@media (--desktop)
+//overflow: hidden
+.show-filter
+	overflow: hidden
+.out
+	min-height: 100vh
+	position: relative
+
+.debug
+	outline: 1px dotted rgba(255, 191, 9, 0.62)
+	outline-offset: 1px
+
+
+.swiper-pagination
+	&-bullet
+		width: 27px
+		height: 23px
+		border-radius: 0
+		position: relative
+		background-color: transparent
+		opacity: 0.1
+		transition: .2s ease-in-out
+		margin: 0
+		&:before
+			content: ' '
+			position: absolute
+			top: 10px
+			right: 0
+			bottom: 10px
+			left: 0
+			background-color: #000
+			transition: .2s ease-in-out
+
+		& + &
+			margin-left: 20px!important
+
+		&:hover, &-active
+			background-color: transparent
+			opacity: 1
+
+			&:before
+				background-color: var(--c-link-hover)

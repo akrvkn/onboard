@@ -1,0 +1,29 @@
+.main-categories {
+
+	display: none;
+
+	@media(--phone-big) {
+		display: block;
+		position: absolute;
+		bottom: 40px;
+		z-index: 3;
+		
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: -18px;
+		}
+		&__item {
+			margin-bottom: 18px;
+			margin-right: 8px;
+		}
+	}
+
+}
+
+.under-slider {
+	margin-top: 0;
+	@media(--phone-big) {
+		margin-top: 60px;
+	}
+}

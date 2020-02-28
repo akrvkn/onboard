@@ -1,0 +1,29 @@
+.printbutton {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 24px;
+  margin-bottom: -60px;
+  cursor: pointer;
+  &.span {
+    display: block;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (--tablet) {
+  .printbutton {
+    display: none;
+  }
+}
+@media (--phone) {
+  .printbutton {
+    display: none;
+  }
+}
+
+@media print {
+  header, footer, nav, picture, .js-hero, #route-map, .js-tabs-slider, .swiper-container, .swiper-slide, #tourloading, #booking-btn, #cruisedetails .section__header, #cruisedetails .ships, .printbutton, .cart-cell, .tours-item__img  {
+    display: none;
+  }
+}

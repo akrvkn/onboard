@@ -1,0 +1,15 @@
+$content-width: 460px;
+$content-width-tablet: 438px;
+$padding-side: 30px;
+$phone-breakpoint: $content-width + $padding-side * 2;
+@custom-media --phone-small (max-width: 374px);
+@custom-media --phone (max-width: 767px);
+@custom-media --phone-big (max-width: 980px);
+@custom-media --tablet (max-width: 1195px);
+@custom-media --desktop (max-width: 1400px);
+@custom-media --desktop-wide (min-width: 1441px);
+// and (min-width: 1024px);
+
+$f-header: 'Prosto One', cursive;
+$f-common: 'Montserrat', sans-serif;
+$half_gap: 1.25rem 1rem .75rem .25rem 0;

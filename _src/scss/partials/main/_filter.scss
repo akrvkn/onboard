@@ -1,0 +1,132 @@
+.filter {
+	margin-top: -120px;
+	z-index: 2;
+	position: relative;
+
+	&-btns {
+		margin-bottom: 40px;
+	}
+
+	&-plate {
+		position: relative;
+		height: 68px;
+		box-shadow: 0 14px 45px rgba(0, 0, 0, 0.13);
+		//border-bottom: 1px solid #f0f0f0;
+		border-radius: 34px;
+		background-color: #ffffff;
+		z-index: 1;
+		padding-right: 230px;
+
+		display: flex;
+		justify-content: space-between;
+		
+		&__submit {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 230px;
+			height: 68px;
+			border-radius: 34px;
+			background-color: var(--c-brand);
+			overflow: hidden;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 1;
+			z-index: 1;
+			span {
+				position: relative;
+				z-index: 1;
+			}
+			@extend .ripple-bg;
+
+			&:before {
+				top: 13px;
+				background-position: 50% 0%;
+			}
+			&:after {
+				content: ' ';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 13px;
+				background-color: #034b81;
+				opacity: 0;
+			}
+			.icon {
+				fill: currentColor;
+				font-size: 17px;
+				vertical-align: bottom;
+				margin-right: 8px;
+			}
+			&:hover:after  {
+				opacity: 1;
+			}
+		}
+	}
+	&-form-tabs {
+		flex: 1 1 auto;
+	}
+	&-input {
+		height: 100%;
+		color: var(--c-gray-1);
+		font-family: var(--f-common);
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.03;
+		padding: 0 20px;
+		border-left: 1px solid #f0f0f0;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	
+	.selectize-dropdown {
+		z-index: -1;
+	}
+
+	.tab-panes {
+		height: 100%;
+	}
+	.tab-pane {
+		display: flex;
+		align-items: stretch;
+		height: 100%;
+
+		&__content {
+			display: flex;
+			justify-content: stretch;
+			align-items: stretch;
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+	
+	@media (--tablet) {
+
+		&-plate {
+			padding-right: 75px;
+
+			&__submit {
+				width: 68px;
+
+				span {
+					font-size: 0;
+					color: transparent;
+
+					.icon {
+						font-size: 24px;
+						color: #ffffff;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	@media (--phone-big) {
+		display: none;
+
+		&-plate {
+		}
+	}
+}
+

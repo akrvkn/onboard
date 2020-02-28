@@ -1,0 +1,34 @@
+
+<div class="slider js-slider swiper-container" data-per-view="1">
+    <ul id="shipImages" class="slider__slides swiper-wrapper" aria-label="Теплоход">
+        <li class="slider__slide swiper-slide">
+            <a href="/" class="ship-image">
+                <div class="ship-image__bg">
+                    <picture>
+                        <source srcset="/assets/img/mtf/ships/{{page.shipid}}/1.webp" type="image/webp">
+                        <img src="/assets/img/mtf/ships/{{page.shipid}}/1.jpg" alt="Теплоход">
+                    </picture>
+                </div>
+                <!-- /.action-item__bg -->
+            </a>
+            <!-- /.actions-item -->
+        </li>
+        <!-- /.slider__item -->
+    </ul>
+    <!-- /.slider__list -->
+    <div class="slider__controls js-slider-controls" style="right: 20%">
+        <button type="button" class="slider-btn slider-btn_prev js-slider-prev" aria-label="назад">
+            <svg class="icon icon-arrow">
+                <use xlink:href="/assets/img/sprite.svg#icon-arrow"></use>
+            </svg>
+        </button>
+        <button type="button" class="slider-btn slider-btn_next js-slider-next" aria-label="вперед">
+            <svg class="icon icon-arrow">
+                <use xlink:href="/assets/img/sprite.svg#icon-arrow"></use>
+            </svg>
+        </button>
+    </div>
+    <!-- /.slider__controls -->
+    <div class="actions__pagination slider-pagination swiper-pagination"></div>
+</div>
+<!-- /.slider__inner -->

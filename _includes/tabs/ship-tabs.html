@@ -1,0 +1,120 @@
+
+<div class="tabs__wrap js-tabs">
+    <div class="tabs js-tabs-slider" role="tablist" aria-label="круизные теплоходы">
+        <div class="">
+            <div class="swiper-slide" style="width: auto!important">
+                <button class="tab btn btn_common active" style="margin-top: 10px;" role="tab" aria-selected="true" aria-controls="ships-1-panel" id="ships-1">
+                    <span>Теплоход</span>
+                </button>
+                <button class="tab btn btn_common " style="margin-top: 10px;" role="tab" aria-controls="ships-2-panel" id="ships-2">
+                    <span>Персонал</span>
+                </button>
+                <button class="tab btn btn_common " style="margin-top: 10px;" role="tab" aria-controls="ships-3-panel" id="ships-3">
+                    <span>Расписание</span>
+                </button>
+                <button class="tab btn btn_common " style="margin-top: 10px;" role="tab" aria-controls="ships-4-panel" id="ships-4">
+                    <span>Каюты и план палуб</span>
+                </button>
+                <button class="tab btn btn_common " style="margin-top: 10px;" role="tab" aria-controls="ships-5-panel" id="ships-5">
+                    <span>Сервис на борту</span>
+                </button>
+            </div>
+            <!-- /.swiper-slide -->
+        </div>
+        <!-- /.tabs-inner -->
+    </div>
+    <div class="tab-panes">
+        <div class="tab-pane active" tabindex="0" role="tabpanel" id="ships-1-panel" aria-labelledby="ships-1">
+            <div class="tabs-pane__content">
+                <h2 class="section__header">{{page.title}}</h2>
+                {% include sections/ship-title-image.html %}
+                <div id="river_cruise_ship_desc" class="section_padding_top">
+                    {% assign id = page.shipid | downcase %}
+                    {{ site.data.ships[id].ship.data.attributes.description  }}
+                    {% if site.data.ships[id]["on-board-name"].data.attributes.description %}
+                    <h3 class="section__header section_padding_top">Имя в истории</h3>
+                    <h3>{{site.data.ships[id]["on-board-name"].data.attributes.name}}</h3>
+                    {{site.data.ships[id]["on-board-name"].data.attributes.description}}
+                    {% endif %}
+                </div>
+                <!-- /.ships -->
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+        <div class="tab-pane " tabindex="0" role="tabpanel" id="ships-2-panel" aria-labelledby="ships-2">
+            <div class="tabs-pane__content">
+                <ul id="river_ship_personal" class="ships">
+                </ul>
+                <!-- /.ships -->
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+        <div class="tab-pane " tabindex="0" role="tabpanel" id="ships-3-panel" aria-labelledby="ships-3">
+            <div class="tabs-pane__content">
+                <ul id="river_ship_cruises" class="ships">
+
+                </ul>
+                <!-- /.ships -->
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+        <div class="tab-pane " tabindex="0" role="tabpanel" id="ships-4-panel" aria-labelledby="ships-4">
+            <div class="tabs-pane__content">
+                <ul id="river_ship_cabins" class="ships">
+                </ul>
+                <div class="ships__deckplan">
+                    <h2 class="section__header section_padding_top">План палуб</h2>
+                    <div id="river_ship_cruise_deckplan" >
+
+                    </div>
+                </div>
+                <!-- /.ships -->
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+        <div class="tab-pane " tabindex="0" role="tabpanel" id="ships-5-panel" aria-labelledby="ships-5">
+            <div class="tabs-pane__content">
+                <h3 class="section__header">В стоимость включено</h3>
+
+                <ul id="river_services_included" class="ships">
+                    {% for service in site.data.ships[id].services.data %}
+                    {% if service.attributes.status == "included" %}
+                    <li class="ships__item">
+                    <a href="#" class="ships-item">
+                        <span class="ships-item__img">
+                    <picture>
+                    <img src="/assets/img/mtf/svg/Done-Bookmark.svg" width="40" height="40" alt="">
+                    </picture>
+                    </span>
+                        <span class="ships-item__desc">{{service.attributes.name}}</span>
+                        </a>
+                    </li>
+                     {% endif %}
+                    {% endfor %}
+
+                </ul>
+                <h3 class="section__header section_padding_top">За дополнительную плату</h3>
+                <ul id="river_services_pay" class="ships">
+                    {% for service in site.data.ships[id].services.data %}
+                    {% if service.attributes.status == "extra charge" %}
+                    <li class="ships__item">
+                        <a href="#" class="ships-item">
+                        <span class="ships-item__img">
+                    <picture>
+                    <img src="/assets/img/mtf/svg/Coins-3.svg" width="40" height="40" alt="">
+                    </picture>
+                    </span>
+                            <span class="ships-item__desc">{{service.attributes.name}}</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+
+                <!-- /.ships -->
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+    </div>
+    <!-- /.tab-panes -->
+</div>

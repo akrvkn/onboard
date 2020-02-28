@@ -1,0 +1,82 @@
+
+<div class="tabs__wrap js-tabs">
+    <div class="tabs js-tabs-slider" role="tablist" aria-label="круизные теплоходы">
+        <div class="">
+            <div class="swiper-slide" style="width: auto!important">
+                <button class="tab btn btn_common active" style="margin-top: 10px;" role="tab" aria-selected="true" aria-controls="seacruise-1-panel" id="seacruise-1">
+                    <span>Общие сведения</span>
+                </button>
+                <button class="tab btn btn_common " style="margin-top: 10px;" role="tab" aria-controls="seacruise-2-panel" id="seacruise-2">
+                    <span>Компания</span>
+                </button>
+                <button class="tab btn btn_common " style="margin-top: 10px;" role="tab" aria-controls="seacruise-3-panel" id="seacruise-3">
+                    <span>Каюты и цены</span>
+                </button>
+                <button class="tab btn btn_common " style="margin-top: 10px;" role="tab" aria-controls="seacruise-4-panel" id="seacruise-4">
+                    <span>Расписание</span>
+                </button>
+            </div>
+            <!-- /.swiper-slide -->
+        </div>
+        <!-- /.tabs-inner -->
+    </div>
+    <div class="tab-panes">
+        <div class="tab-pane active" tabindex="0" role="tabpanel" id="seacruise-1-panel" aria-labelledby="seacruise-1">
+            <div class="tabs-pane__content">
+                {% include sections/sea-title-image.html %}
+
+                <ul id="sea-summary" class="shiptour" style="padding: 40px 0">
+                    <li id="ship-class"><label>КЛАСС</label>&nbsp;-&nbsp;</li>
+                    <li id="ship-comp"><label>КОМПАНИЯ</label>&nbsp;-&nbsp;</li>
+                    <li id="ship-rus"><label>РУССКИЕ ГРУППЫ</label>&nbsp;-&nbsp;</li>
+                    <li id="ship-date-start"><label>ОТХОД</label>&nbsp;-&nbsp;</li>
+                    <li id="ship-nights"><label>НОЧЕЙ</label>&nbsp;-&nbsp;</li>
+                </ul>
+                <div id="cruise-included"></div>
+                <!-- /.ships -->
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+        <div class="tab-pane " tabindex="0" role="tabpanel" id="seacruise-2-panel" aria-labelledby="seacruise-2">
+            <div class="tabs-pane__content">
+                <h2 id="sea-company" class="section__header"></h2>
+
+                <div id="sea_company_desc">
+
+                </div>
+                <!-- /.ships -->
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+        <div class="tab-pane " tabindex="0" role="tabpanel" id="seacruise-3-panel" aria-labelledby="seacruise-3">
+            <div class="tabs-pane__content">
+                <h3 class="section__header">Каюты и цены</h3>
+                <ul id="sea_cruise_cabins" class="ships">
+                </ul>
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+        <div class="tab-pane " tabindex="0" role="tabpanel" id="seacruise-4-panel" aria-labelledby="seacruise-4">
+            <div class="tabs-pane__content">
+                <h2 class="section__header">Расписание</h2>
+                <div class="section_padding_bottom price-table">
+                <table>
+                    <tbody id="sea_shedule_table">
+                    <tr>
+                        <th>День</th>
+                        <th>Страна</th>
+                        <th>Порт</th>
+                        <th>Прибытие</th>
+                        <th>Отход</th>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+
+        </div>
+    </div>
+    <!-- /.tab-panes -->
+</div>

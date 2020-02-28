@@ -1,0 +1,185 @@
+<div class="filter">
+    <div class="ctr">
+        <div class="filter__inner">
+            <div class="tabs__wrap tabs__wrap_filter js-tabs">
+                <div class="tabs js-tabs-slider" role="tablist" aria-label="наши направления">
+                    <div class="tabs-inner swiper-wrapper">
+                        <div class="swiper-slide">
+                            <button class="tab btn btn_filter active" role="tab" aria-selected="true" aria-controls="filter-1-panel" id="filter-1">
+                                <span>Речные круизы</span>
+                            </button>
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <button class="tab btn btn_filter " role="tab" aria-controls="filter-2-panel" id="filter-2">
+                                <span>Морские круизы</span>
+                            </button>
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <button class="tab btn btn_filter " role="tab" aria-controls="filter-3-panel" id="filter-3">
+                                <span>Аренда теплоходов</span>
+                            </button>
+                        </div>
+                        <!-- /.swiper-slide -->
+                        <div class="swiper-slide">
+                            <button class="tab btn btn_filter " role="tab" aria-controls="filter-4-panel" id="filter-4">
+                                <span>Туры</span>
+                            </button>
+                        </div>
+                        <!-- /.swiper-slide -->
+                    </div>
+                    <!-- /.tabs-inner -->
+                </div>
+                <div class="tab-panes">
+                    <div class="tab-pane tab-pane_filter active" tabindex="0" role="tabpanel" id="filter-1-panel" aria-labelledby="filter-1">
+                        <div class="tabs-pane__content">
+                            <div class="filter-plate">
+                                <div class="dropdown js-drop">
+                                    <select name="direction" class="js-select">
+                                        <option value="">Направление</option>
+                                    </select>
+                                </div>
+                                <!-- /.dropdown -->
+                                <div class="dropdown">
+                                    <input name="date_out" class="filter-input js-datetime" autocomplete="off" placeholder="Время отбытия">
+                                </div>
+                                <!-- /.dropdown -->
+                                <div class="dropdown">
+                                    <input name="date_in" class="filter-input js-datetime" autocomplete="off" placeholder="Время отбытия">
+                                </div>
+                                <!-- /.dropdown -->
+                                <div class="dropdown js-drop">
+                                    <select name="ship" class="js-select">
+                                        <option value="">Теплоход</option>
+                                        <option value="1">Каписан крузенштерн</option>
+                                        <option value="2">Книжна Виктория</option>
+                                        <option value="3">Сергей Есенин</option>
+                                        <option value="4">Как заказать круиз?</option>
+                                    </select>
+                                </div>
+                                <!-- /.dropdown -->
+                                <button class="btn filter-plate__submit" type="submit">
+                          <span>
+                            <svg class="icon icon-search">
+                              <use xlink:href="assets/img/sprite.svg#icon-search"></use>
+                            </svg> Найти</span></button>
+                                <!-- /.btn btn_filter filter__submit -->
+                            </div>
+                            <!-- /.filter-plate -->
+                        </div>
+                        <!-- /.tabs-panel__content -->
+                    </div>
+                    <div class="tab-pane tab-pane_filter " tabindex="0" role="tabpanel" id="filter-2-panel" aria-labelledby="filter-2">
+                        <div class="tabs-pane__content">
+                            <div class="filter-plate">
+                                <div class="dropdown js-drop">
+                                    <select name="seadirection" class="js-select">
+                                        <option value="">Направление</option>
+                                        <option value="1">Европа</option>
+                                        <option value="2">Америка</option>
+                                        <option value="3">Азия</option>
+                                        <option value="4">Австралия</option>
+                                    </select>
+                                </div>
+                                <!-- /.dropdown -->
+                                <div class="dropdown">
+                                    <input name="date_out" class="filter-input js-datetime" placeholder="Время от">
+                                </div>
+                                <!-- /.dropdown -->
+                                <div class="dropdown">
+                                    <input name="date_in" class="filter-input js-datetime" placeholder="Время до">
+                                </div>
+                                <!-- /.dropdown -->
+                                <div class="dropdown js-drop">
+                                    <select name="seacompany" class="js-select">
+                                        <option value="">Компания</option>
+                                        <option value="1">Costa Cruises</option>
+                                        <option value="2">MSC Cruises</option>
+                                        <option value="3">Holland America Line</option>
+                                        <option value="4">Norwegian Cruise Line</option>
+                                    </select>
+                                </div>
+                                <!-- /.dropdown -->
+                                <button class="btn filter-plate__submit" type="submit">
+                          <span>
+                            <svg class="icon icon-search">
+                              <use xlink:href="assets/img/sprite.svg#icon-search"></use>
+                            </svg> Найти</span></button>
+                                <!-- /.btn btn_filter filter__submit -->
+                            </div>
+                            <!-- /.filter-plate -->
+                        </div>
+                        <!-- /.tabs-panel__content -->
+                    </div>
+                    <div class="tab-pane tab-pane_filter " tabindex="0" role="tabpanel" id="filter-3-panel" aria-labelledby="filter-3">
+                        <div class="tabs-pane__content">
+                            <div class="filter-plate">
+                                <div class="dropdown js-drop">
+                                    <select name="shiparenda" class="js-select">
+                                        <option value="">Теплоход</option>
+                                        <option value="1">Князь Юрий</option>
+                                        <option value="2">Союз</option>
+                                    </select>
+                                </div>
+                                <!-- /.dropdown -->
+                                <div class="dropdown">
+                                    <input name="date_out" class="filter-input js-datetime" placeholder="Время от">
+                                </div>
+                                <!-- /.dropdown -->
+                                <div class="dropdown">
+                                    <input name="date_in" class="filter-input js-datetime" placeholder="Время до">
+                                </div>
+                                <!-- /.dropdown -->
+                                <button class="btn filter-plate__submit" type="submit">
+                          <span>
+                            <svg class="icon icon-search">
+                              <use xlink:href="assets/img/sprite.svg#icon-search"></use>
+                            </svg> Найти</span></button>
+                                <!-- /.btn btn_filter filter__submit -->
+                            </div>
+                            <!-- /.filter-plate -->
+                        </div>
+                        <!-- /.tabs-panel__content -->
+                    </div>
+                    <div class="tab-pane tab-pane_filter " tabindex="0" role="tabpanel" id="filter-4-panel" aria-labelledby="filter-4">
+                        <div class="tabs-pane__content">
+                            <div class="filter-plate">
+                                <div class="dropdown js-drop">
+                                    <select name="direction" class="js-select">
+                                        <option value="">Направление</option>
+                                        <option value="1">Турция</option>
+                                        <option value="2">Европа</option>
+                                        <option value="3">Америка</option>
+                                        <option value="4">Австралия</option>
+                                    </select>
+                                </div>
+                                <!-- /.dropdown -->
+                                <div class="dropdown">
+                                    <input name="date_out" class="filter-input js-datetime" autocomplete="off" placeholder="Время от">
+                                </div>
+                                <!-- /.dropdown -->
+                                <div class="dropdown">
+                                    <input name="date_in" class="filter-input js-datetime" autocomplete="off" placeholder="Время до">
+                                </div>
+                                <!-- /.dropdown -->
+                                <button class="btn filter-plate__submit" type="submit">
+                          <span>
+                            <svg class="icon icon-search">
+                              <use xlink:href="assets/img/sprite.svg#icon-search"></use>
+                            </svg> Найти</span></button>
+                                <!-- /.btn btn_filter filter__submit -->
+                            </div>
+                            <!-- /.filter-plate -->
+                        </div>
+                        <!-- /.tabs-panel__content -->
+                    </div>
+                </div>
+                <!-- /.tab-panes -->
+            </div>
+        </div>
+        <!-- /.filter__inner -->
+    </div>
+    <!-- /.ctr -->
+</div>
+<!-- /.filter -->

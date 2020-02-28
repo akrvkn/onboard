@@ -1,0 +1,16 @@
+title: "Мостурфлот"
+destination: public
+include:
+  - _pages
+exclude:
+  - node_modules/
+  - package-lock.json
+  - package.json
+  - webpack.mix.js
+  - yarn.lock
+  - readme.md
+  - shipitfile.js
+  - gulpfile.js
+  - import.sh
+  - Gemfile
+  - Gemfile.lock
