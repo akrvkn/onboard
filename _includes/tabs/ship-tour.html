@@ -12,7 +12,9 @@
                 <button class="tab btn btn_common" style="margin-top: 10px;" role="tab" aria-selected="true" aria-controls="ships-3-panel" id="ships-3">
                     <span>Расписание круиза</span>
                 </button>
-
+                <button class="tab btn btn_common " style="margin-top: 10px;" role="tab" aria-controls="ships-4-panel" id="ships-4">
+                    <span>Все круизы</span>
+                </button>
                 <button class="tab btn btn_common " style="margin-top: 10px;" role="tab" aria-controls="ships-5-panel" id="ships-5">
                     <span>Сервис на борту</span>
                 </button>
@@ -65,7 +67,7 @@
             </div>
             <!-- /.tabs-panel__content -->
         </div>
-        <div class="tab-pane" tabindex="0" role="tabpanel" id="ships-3-panel" aria-labelledby="ships-2">
+        <div class="tab-pane" tabindex="0" role="tabpanel" id="ships-3-panel" aria-labelledby="ships-3">
             <div class="tabs-pane__content">
                 <h2 id="tourtitle" class="section__header"></h2>
                 <ul id="river_tour_points" class="shiptour">
@@ -74,6 +76,15 @@
                 </ul>
                 <!-- /.ships -->
                 <div id="route-notes" class="section_padding_top"></div>
+            </div>
+            <!-- /.tabs-panel__content -->
+        </div>
+        <div class="tab-pane " tabindex="0" role="tabpanel" id="ships-4-panel" aria-labelledby="ships-4">
+            <div class="tabs-pane__content">
+                <ul id="river_ship_cruises" class="ships">
+
+                </ul>
+                <!-- /.ships -->
             </div>
             <!-- /.tabs-panel__content -->
         </div>
