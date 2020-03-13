@@ -42,14 +42,10 @@ import './lib/tgl';
 import './lib/mainMenu';
 import './mtf/backtotop';
 import './lib/cookies'
-//import './lib/range';
 import './lib/datetime';
 import './lib/tgl';
-//import './mtf/init-featured';
-//import './mtf/init-rivercruises';
 import './mtf/init-rivercruise-details';
-//import './mtf/ships-online';
-//import './mtf/tablo';
+
 
 if (isMobileDevice()) {
     $('[data-simplebarmanual]').each(function() {

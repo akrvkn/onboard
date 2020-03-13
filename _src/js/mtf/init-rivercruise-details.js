@@ -242,7 +242,6 @@ function renderTourPoints(points){
 function renderShipDescription(ship) {
     const $deckplan = $('#river_ship_cruise_deckplan');
     const $riverCruiseShipDesc = $('#river_cruise_ship_desc');
-    const $tourloading = $('#tourloading');
     $('#shipname').html(ship.data.attributes.name);
     $('#shiptitle').html(ship.data.attributes.name);
     $riverCruiseShipDesc.html(ship.data.attributes.description);
@@ -250,17 +249,7 @@ function renderShipDescription(ship) {
     let servicesPay = [];
     $.each(ship.included, function(index, included){
         if(included.type === 'deckplans' && tourId > 0){
-            if(included.attributes.mime === 'image/svg+xml' ) {
-                //$deckplan.html('<iframe src="https://booking.mosturflot.ru/rivercruises/' + tourId + '/deckplan" width="100%" height="' + included.attributes.height + '" style="border: 0"></iframe>' );
-                $('.ships__deckplan').html('' );
-                $tourloading.html('<div style="width: 100%;margin: 30px 0 0 0; text-align: center"><a href="https://booking.mosturflot.ru/rivercruises/' + tourId + '#deckplan-active" ><span style="display: block; margin: 30px;">План теплохода с реальной загрузкой кают</span><br><div style="width:350px;height:300px;margin: 0 auto;background-position: center; background-repeat: no-repeat; background-size: contain;background-image: url(/assets/img/mtf/ships/'+ shipId + '/deckplan.png)"></div></a></div>');
-                //$tourloading.html('<a href="/assets/img/mtf/ships/'+ shipId + '/deckplan.webp" target="_blank"><picture><source srcset="/assets/img/mtf/ships/'+ shipId + '/deckplan.webp" type="image/webp"  width="100%"><img src="/assets/img/mtf/ships/'+ shipId + '/deckplan.jpg" alt="План палуб"  width="100%"></picture></a>');
-            }else{
-                $deckplan.html('<a href="' + included.links['image-url'] + '" target="_blank"><picture><img src="' + included.links['image-url'] + '" alt="План палуб" width="100%" /></picture></a>');
-            }
-        }else{
-            //$deckplan.html('<iframe src="https://api.mosturflot.ru/v3/rivercruises/ships/' + shipId + '/deckplan.svg" width="100%" height="' + included.attributes.height + '" style="border: 0"></iframe>');
-            $deckplan.html('<a href="/assets/img/mtf/ships/'+ shipId + '/deckplan.webp" target="_blank"><picture><source srcset="/assets/img/mtf/ships/'+ shipId + '/deckplan.webp" type="image/webp"  width="100%"><img src="/assets/img/mtf/ships/'+ shipId + '/deckplan.png" alt="План палуб"  width="100%"></picture></a>');
+            $deckplan.html('<a href="/assets/data/ships/'+ shipId + '/deckplan.webp" target="_blank"><picture><source srcset="/assets/img/mtf/ships/'+ shipId + '/deckplan.webp" type="image/webp"  width="100%"><img src="/assets/data/ships/'+ shipId + '/deckplan.png" alt="План палуб"  width="100%"></picture></a>');
         }
         if(included.type === 'ship-classes'){
             $riverCruiseShipDesc.prepend('Класс теплохода: ' + included.attributes.name + '<br>');

@@ -49,14 +49,14 @@ foreach($ships as $ship){
     }
     $deckplan = file_get_contents('https://api.mosturflot.ru/v3/rivercruises/ships/'.$ship.'/deckplan.svg');
     file_put_contents('ships/'.$ship.'/deckplan.svg', $deckplan);
-    $ship_data = file_get_contents('https://api.mosturflot.ru/v3/rivercruises/ships/'.$ship.'?include=title-image,ship-class,services,cabin-categories,staff,deckplan,on-board-name');
+    $ship_data = file_get_contents('https://api.mosturflot.ru/v3/rivercruises/ships/'.$ship.'?include=images,ship-class,services,cabin-categories,staff,deckplan,on-board-name');
     file_put_contents('ships/'.$ship.'/ship.json', $ship_data);
 
     $ship_img_url = 'https://api.mosturflot.ru/v3/rivercruises/ships/'.$ship.'/images';
     $ship_imgs = file_get_contents($ship_img_url);
     file_put_contents('ships/'.$ship.'/images.json', $ship_imgs);
 
-    $shipToursURL = $tours_base.'filter[ship-id][in][]='.$ship;
+    $shipToursURL = 'https://api.mosturflot.ru/v3/rivercruises/tours?fields[tours]=ship-id,route,days,start,finish,price-from,is-special-offer,max-discount,price-from-discount,discount-expire&include=ship,ship-title-image&fields[ships]=name&filter[start][gte]=2020-04-15T00:00:00Z&filter[ship-id]='.$ship.'&per-page=100';
     $shipTours = file_get_contents($shipToursURL);
     file_put_contents('ships/'.$ship.'/tours.json', $shipTours);
 
