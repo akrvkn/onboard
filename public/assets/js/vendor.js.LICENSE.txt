@@ -1,5 +1,5 @@
 /*!
- * CSSPlugin 3.2.4
+ * CSSPlugin 3.2.1
  * https://greensock.com
  *
  * Copyright 2008-2020, GreenSock. All rights reserved.
@@ -9,7 +9,7 @@
 */
 
 /*!
- * GSAP 3.2.4
+ * GSAP 3.2.1
  * https://greensock.com
  *
  * @license Copyright 2008-2020, GreenSock. All rights reserved.

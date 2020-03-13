@@ -25,7 +25,7 @@ foreach($tours_list['data'] as $key=>$tour){
         mkdir('ships/'.$tour['attributes']['ship-id']);
     }
     //$tour_url = 'https://api.mosturflot.ru/v3/rivercruises/tours/'.$tour['attributes']['id'].'/tour-points?include=excursions';
-    $tour_url = 'https://api.mosturflot.ru/v3/rivercruises/tour-points?filter[tour-id]='.$tour['attributes']['id'].'&include=tour,tour.ship,excursions,title-image,tour-rates&fields[tours]=ship-id,days,start,finish,route,&fields[ships]=id,name&per-page=10000';
+    $tour_url = 'https://api.mosturflot.ru/v3/rivercruises/tour-points?filter[tour-id]='.$tour['attributes']['id'].'&include=tour,tour.ship,excursions,title-image,tour-rates&fields[tours]=ship-id,days,start,finish,route,route-note&fields[ships]=id,name&per-page=10000';
     $tour_json = file_get_contents($tour_url);
     file_put_contents('ships/'.$tour['attributes']['ship-id'].'/'.$tour['attributes']['id'].'.json', $tour_json);
     $tour_data = json_decode($tour_json, true);

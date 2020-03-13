@@ -183,6 +183,7 @@ function renderTourPoints(points){
                 tourDates = moment(inc.attributes.start).format('DD MMMM H:mm') + ' - ' + moment(inc.attributes.finish).format('DD MMMM H:mm');
                 $('#tourroute').prepend(moment(inc.attributes.start).format('DD MMMM H:mm') + ' - ' + moment(inc.attributes.finish).format('DD MMMM H:mm') + ' (Дней: ' + inc.attributes.days + ')<br>' +  inc.attributes.route );
                 $('#tourtitle').html('<span class="tours-item__date">' + moment(inc.attributes.start).format('DD MMMM H:mm') + ' - ' + moment(inc.attributes.finish).format('DD MMMM H:mm') + ' (Дней: ' + inc.attributes.days + ')</span><br>' +  inc.attributes.route  );
+                renderRouteNotes(inc.attributes['route-note']);
             }
             if(index + 1 === points.included.length){
                 let tourpoints = {};
